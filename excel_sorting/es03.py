@@ -15,4 +15,3 @@ df2 = df2.replace(['Latin America and Caribbean'],'South America')
 print(df2)
 print(df2['region'].unique())
 df2.to_csv('./data_sorted.csv')
-
