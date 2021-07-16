@@ -199,6 +199,16 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Plotly Test</h4>
+                                {% autoescape off %}
+                                {{ plot_div1 }}
+                                {{ plot_div2 }}
+                                {{ plot_div3 }}
+                                {{ plot_div4 }}
+                                {{ plot_div5 }}
+                                {{ plot_div6 }}
+
+                                {% endautoescape %}
+
                             </div>
                             <div class="card-body">
                                 <div id="container">
