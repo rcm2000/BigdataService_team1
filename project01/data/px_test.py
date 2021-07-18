@@ -1,9 +1,12 @@
-from plotly.offline import plot
-import plotly.graph_objs as go
-
-fig = go.Figure()
-scatter = go.Scatter(x=[0,1,2,3], y=[0,1,2,3],
-                     mode='lines', name='test',
-                     opacity=0.8, marker_color='green')
-fig.add_trace(scatter)
-plt_div = plot(fig, output_type='div')
+import plotly.express as px
+import pandas as pd
+df = pd.read_csv('C:\BigdataProjects\BigdataService_team1\project01\data\data02.csv')
+fig = px.choropleth(df, locations='country', locationmode='country names',
+                    color='score',
+                    animation_frame = 'year',
+                    basemap_visible=False,
+                    color_continuous_scale='Purpor_r',
+                    title=('Happiness score 2015-2021 Report')
+                   )
+fig.update_layout(height=600)
+fig.show()

@@ -65,16 +65,19 @@
                                     <a href="info">Info</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="dashboard">Dashboard</a>
+                                    <a href="social">Social</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="table">Table</a>
+                                    <a href="health">Health</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="datatable">Datatable</a>
+                                    <a href="gdp">Gdp</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="chart">chart</a>
+                                    <a href="etc">Etc</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="summary">Summary</a>
                                 </li>
                                 </ul>
                         <li class="sidebar-item  has-sub">
@@ -84,45 +87,21 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="info">Info</a>
+                                    <a href="info2">Info</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="dashboard">Dashboard</a>
+                                    <a href="covid19">Covid-19</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="table">Table</a>
+                                    <a href="militarypower">Military power</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="datatable">Datatable</a>
+                                    <a href="illiteracyrate">Illiteracy rate</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="chart">chart</a>
+                                    <a href="summary2">Summary</a>
                                 </li>
                                 </ul>
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Title3</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="info">Info</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="dashboard">Dashboard</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="table">Table</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="datatable">Datatable</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="chart">chart</a>
-                                </li>
-                                </ul>
-
-                        </li>
 
                         <li class="sidebar-title">Login</li>
 
@@ -326,49 +305,12 @@
                             <div class="col-12 col-xl-8">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Latest Comments</h4>
+                                        <h4>Happiness score 2015-2021 Report</h4>
                                     </div>
                                     <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-lg">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Comment</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="{% static 'assets/images/faces/5.jpg' %}">
-                                                                </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Cantik</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Congratulations on your graduation!</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="{% static 'assets/images/faces/2.jpg' %}">
-                                                                </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Ganteng</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Wow amazing design! Can you make another
-                                                                tutorial for
-                                                                this design?</p>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        {% autoescape off %}
+                                        {{ plot_div }}
+                                    {% endautoescape %}
                                     </div>
                                 </div>
                             </div>
@@ -428,10 +370,13 @@
                         </div>
                         <div class="card">
                             <div class="card-header">
-                                <h4>Visitors Profile</h4>
+                                <h4>행복 키워드 클라우드</h4>
                             </div>
-                            <div class="card-body">
-                                <div id="chart-visitors-profile"></div>
+
+                            <img class="card-img-bottom img-fluid" src="{% static 'happywc.jpg' %}"
+                                        alt="Card image cap" style="max-width: 80%; max-height: 90%; margin: auto">
+                            <div>
+                                <br>
                             </div>
                         </div>
                     </div>
