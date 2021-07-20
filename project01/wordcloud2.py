@@ -32,7 +32,7 @@ def get_titles(start_num, end_num):
             titles = soup.select(
                 '.news_tit'
             )
-
+            print(titles)
             # list에 넣어준다
             for title in titles:
                 title_list.append(title['title'])

@@ -1,6 +1,9 @@
 import plotly.express as px
 import pandas as pd
-df = pd.read_csv('C:\BigdataProjects\BigdataService_team1\project01\data\data02.csv')
+
+from config.settings import DATA_DIRS
+
+df = pd.read_csv(DATA_DIRS[0]+'\\data02.csv')
 fig = px.choropleth(df, locations='country', locationmode='country names',
                     color='score',
                     animation_frame = 'year',
