@@ -155,7 +155,7 @@
                         <div class="row">
                             <div class="col-12 col-md-6 order-md-1 order-last">
                                 <h3>Etc</h3>
-                                <p class="text-subtitle text-muted">Subtitle</p>
+                                <p class="text-subtitle text-muted">freedom, trust, generosity</p>
                             </div>
                             <div class="col-12 col-md-6 order-md-2 order-first">
                                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -171,13 +171,30 @@
                     <section class="section">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Example Content</h4>
+                                <h4 class="card-title">데이터 시각화</h4>
                             </div>
                             <div class="card-body">
+                                <img src="{% static 'assets/images/samples/etc2.png' %}" class="card-img-top img-fluid"
+                                         alt="singleminded"  >
+                               <h5> <br>
+Etc는 Freedom, Trust, Generosity 이렇게 세 가지 변수로 구성되어있다. 각 변수들이 행복 지수와 상관관계가 낮기 때문에 Etc로 분류했다. Freedom은 "당신은 당신의 삶을 스스로 선택할 수 있는 자유가 보장되어 있습니까"라는 질문에 네(1), 아니오(0)으로 답변한 것이다.
+Trust는 "정부 부패가 만연해 있습니까?"라는 질문과 "기업 부패가 만연해 있습니까?"라는 질문에 네(1), 아니오(0)으로 답변한 것이다.
+Generosity는 "당신은 지난 달에 자선을 목적으로 기부한 적이 있습니까?"라는 질문에 네(1), 아니오(0)으로 답변한 것이다. 이 변수들은 년도별로 단위가 달라 이하 그래프들은 표준화된 데이터를 기반으로 작성했다.
+
+</h5><br>
+                                <h4>Etc heatmap</h4>
+                                <div style="text-align : center;"><img src="{% static 'assets/images/samples/heatmap_etc.png' %}" align="center"></div>
+                                <i class="bi bi-chat-dots-fill"></i><h7> freedom, trust, generosity와 행복지수 간의 상관관계를 나타내는 히트맵이다. 행복지수와 freedom의 상관계수는 0.57이고 행복지수와 trust의 상관계수는 0.41이고 행복지수와 generosity의 상관계수는 0.11이다.특히 generosity는 freedom, trust에 비해 낮은 상관관계를 보이고 있다.
+
+
+</h7>
                                 {% autoescape off %}
                                 {{ plot_div1 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 년도별로 Freedom에 대한 행복 지수의 상관관계를 scatter plot을 통하여 나타내었다. 국가별 면적을 웹 스크롤링을 통하여 column에 추가하였고, 이를 plot 원소의 크기로 반영하였다. Freedom은 위의 히트맵에서도 확인할 수 있듯이 행복지수와 어느정도 상관 관계를 보이고 있어, 우상향 그래프를 나타내는것을 확인할 수 있다. 또한 한국은 아시아대륙 내에서 Freedom이 중국 일본보다 낮으며, 거의 최하위권임을 확인할 수 있다.</h7>
                                 {{ plot_div2 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 년도별로 Trust에 대한 행복 지수의 상관관계를 scatter plot을 통하여 나타내었다. Trust는 규칙성 없이 그래프 내에 분포되어 있음을 확인할 수 있으며, 특히 오세아니아의 국가들이 Trust가 높은것을 확인할 수 있다.</h7>
                                 {{ plot_div3 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 년도별로 Generosity에 대한 행복 지수의 상관관계를 scatter plot을 통하여 나타내었다. Generosity 또한 규칙성 없이 그래프 내에 분포되어 있음을 확인할 수 있으며, 흥미로운 것은 기부의 빈도를 나타내는 위 그래프에서 상대적으로 Gdp가 낮은 아프리카의 국가들보다 유럽의 대다수의 국가들이 Generosity가 낮거나 비슷하다는 점이다.  </h7>
                                 {% endautoescape %}
                             </div>
                         </div>
