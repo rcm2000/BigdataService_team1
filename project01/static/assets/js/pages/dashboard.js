@@ -15,12 +15,12 @@ var optionsProfileVisit = {
 	plotOptions: {
 	},
 	series: [{
-		name: 'sales',
-		data: [9,20,30,20,10,20,30,20,10,20,30,20]
+		name: 'Happiness score',
+		data: [5.845, 5.339, 5.94,6.951,7.183, 3.819, 6.33,  4.956, 7.842, 5.477]
 	}],
 	colors: '#435ebe',
 	xaxis: {
-		categories: ["Jan","Feb","Mar","Apr","May","Jun","Jul", "Aug","Sep","Oct","Nov","Dec"],
+		categories: ['South Korea', 'China', 'Japan','United States', 'Australia', 'India', 'Brazil', 'South Africa', 'Finland', 'Russia'],
 	},
 }
 let optionsVisitorsProfile  = {
@@ -46,8 +46,8 @@ let optionsVisitorsProfile  = {
 
 var optionsEurope = {
 	series: [{
-		name: 'series1',
-		data: [310, 800, 600, 430, 540, 340, 605, 805,430, 540, 340, 605]
+		name: 'score',
+		data: [5.984, 5.835, 5.838, 5.875, 5.895, 5.8724, 5.845]
 	}],
 	chart: {
 		height: 80,
@@ -67,8 +67,8 @@ var optionsEurope = {
 		enabled: false
 	},
 	xaxis: {
-		type: 'datetime',
-		categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z","2018-09-19T07:30:00.000Z","2018-09-19T08:30:00.000Z","2018-09-19T09:30:00.000Z","2018-09-19T10:30:00.000Z","2018-09-19T11:30:00.000Z"],
+		type: 'string',
+		categories: ['2015','2016','2017','2018','2019','2020','2021'],
 		axisBorder: {
 			show:false
 		},
@@ -91,16 +91,100 @@ var optionsEurope = {
 		},
 	},
 };
-
-let optionsAmerica = {
-	...optionsEurope,
+var optionsAmerica = {
+	series: [{
+		name: 'score',
+		data: [5.14, 5.245, 5.273, 5.246, 5.191, 5.1239, 5.339]
+	}],
+	chart: {
+		height: 80,
+		type: 'area',
+		toolbar: {
+			show:false,
+		},
+	},
 	colors: ['#008b75'],
-}
-let optionsIndonesia = {
-	...optionsEurope,
+	stroke: {
+		width: 2,
+	},
+	grid: {
+		show:false,
+	},
+	dataLabels: {
+		enabled: false
+	},
+	xaxis: {
+		type: 'string',
+		categories: ['2015','2016','2017','2018','2019','2020','2021'],
+		axisBorder: {
+			show:false
+		},
+		axisTicks: {
+			show:false
+		},
+		labels: {
+			show:false,
+		}
+	},
+	show:false,
+	yaxis: {
+		labels: {
+			show:false,
+		},
+	},
+	tooltip: {
+		x: {
+			format: 'dd/MM/yy HH:mm'
+		},
+	},
+};
+var optionsIndonesia = {
+	series: [{
+		name: 'score',
+		data: [5.987, 5.921, 5.92, 5.915, 5.886, 5.8708, 5.94]
+	}],
+	chart: {
+		height: 80,
+		type: 'area',
+		toolbar: {
+			show:false,
+		},
+	},
 	colors: ['#dc3545'],
-}
-
+	stroke: {
+		width: 2,
+	},
+	grid: {
+		show:false,
+	},
+	dataLabels: {
+		enabled: false
+	},
+	xaxis: {
+		type: 'string',
+		categories: ['2015','2016','2017','2018','2019','2020','2021'],
+		axisBorder: {
+			show:false
+		},
+		axisTicks: {
+			show:false
+		},
+		labels: {
+			show:false,
+		}
+	},
+	show:false,
+	yaxis: {
+		labels: {
+			show:false,
+		},
+	},
+	tooltip: {
+		x: {
+			format: 'dd/MM/yy HH:mm'
+		},
+	},
+};
 
 
 var chartProfileVisit = new ApexCharts(document.querySelector("#chart-profile-visit"), optionsProfileVisit);

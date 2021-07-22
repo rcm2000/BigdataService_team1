@@ -23,20 +23,24 @@
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
-                <div class="sidebar-header">
+
                     <div class="d-flex justify-content-between">
+
                         <div class="logo">
-                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset=""></a>
+
+                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
+
                         </div>
+
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
-                </div>
+
                 <div class="sidebar-menu">
                     <ul class="menu">
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item ">
                             <a href="index" class='sidebar-link'>
                                 <i class="bi bi-award-fill"></i>
                                 <span>Main</span>
@@ -58,14 +62,14 @@
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Title1</span>
+                                <span>Theme1</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
                                     <a href="info">Info</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="social">Social</a>
+                                    <a href="social">Social support</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="health">Health</a>
@@ -76,17 +80,14 @@
                                 <li class="submenu-item ">
                                     <a href="etc">Etc</a>
                                 </li>
-                                <li class="submenu-item ">
-                                    <a href="summary">Summary</a>
-                                </li>
                                 </ul>
-                        <li class="sidebar-item  has-sub">
+                        <li class="sidebar-item  has-sub active ">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Title2</span>
+                                <span>Theme2</span>
                             </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
+                            <ul class="submenu active ">
+                                <li class="submenu-item active ">
                                     <a href="info2">Info</a>
                                 </li>
                                 <li class="submenu-item ">
@@ -97,9 +98,6 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="illiteracyrate">Illiteracy rate</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="summary2">Summary</a>
                                 </li>
                                 </ul>
 
@@ -154,14 +152,14 @@
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>Info</h3>
-                            <p class="text-subtitle text-muted">Sub Title</p>
+                            <h3>프로젝트 소개</h3>
+                            <p class="text-subtitle text-muted">- 코로나19, 국력, 문맹률</p>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Card</li>
+                                    <li class="breadcrumb-item"><a href="index">Main</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">info</li>
                                 </ol>
                             </nav>
                         </div>
@@ -170,23 +168,70 @@
                 <!-- Basic card section start -->
                 <section id="content-types">
                     <div class="row">
-                        <div class="col-xl-4 col-md-6 col-sm-12">
+                        <div class="col-xl-8 col-md-6 col-sm-12">
                             <div class="card">
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <h4 class="card-title">Card With Header And Footer</h4>
+                                        <h4 class="card-title">Covid-19</h4>
                                         <p class="card-text">
-                                            Gummies bonbon apple pie fruitcake icing biscuit apple pie jelly-o sweet
-                                            roll. Toffee
-                                            sugar plum sugar plum jelly-o jujubes bonbon dessert carrot cake.
+                                            WHO에 보고된 날짜별 일일 사례 및 사망 데이터
                                         </p>
+
                                     </div>
-                                    <img class="img-fluid w-100" src="{% static 'assets/images/samples/banana.jpg' %}"
+                                    <img class="img-fluid w-100" src="{% static 'assets/images/samples/who2.png' %}"
                                         alt="Card image cap">
+                                    <table class="table mb-0 table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Short field name</th>
+                                                        <th colspan='2'>Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Date</td>
+                                                        <td colspan='2'>WHO에 보고한 날짜</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Country</td>
+                                                        <td colspan='2'>Country, territory, area</td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="text-bold-500">New_cases</td>
+                                                        <td colspan='2'>신규 확진 사례. 현재 누적 확진 사례에서 이전 누적 확진 사례를 빼서 계산합니다.</td>
+
+                                                    </tr>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cumulative_cases</td>
+                                                        <td colspan='2'>현재까지 WHO에 보고된 누적 확인 사례.</td>
+
+                                                    </tr>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">New_deaths</td>
+                                                        <td colspan='2'>신규 확진자 사망 수. 현재 누적 사망자 수에서 이전 누적 사망자 수를 빼서 계산합니다.</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cumulative_deaths</td>
+                                                        <td colspan='2'>현재까지 WHO에 보고된 누적 사망자 수.</td>
+
+                                                    </tr>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
                                 </div>
                                 <div class="card-footer d-flex justify-content-between">
-                                    <span>Card Footer</span>
-                                    <button class="btn btn-light-primary">Read More</button>
+                                    <span> </span>
+                                    <button class="btn btn-light-primary"><a href="https://covid19.who.int/info/" target='_blank'>Read More</a></button>
                                 </div>
                             </div>
 
@@ -194,102 +239,44 @@
                         <div class="col-xl-4 col-md-6 col-sm-12">
                             <div class="card">
                                 <div class="card-content">
-                                    <img src="{% static 'assets/images/samples/motorcycle.jpg' %}" class="card-img-top img-fluid"
+                                    <br>
+                                    <img src="{% static 'assets/images/samples/heatmap_covid.png' %}" class="card-img-top img-fluid"
                                          alt="singleminded">
                                     <div class="card-body">
-                                        <h5 class="card-title">Be Single Minded</h5>
+                                        <h5 class="card-title">행복 지수와의 상관관계</h5>
                                         <p class="card-text">
-                                            Chocolate sesame snaps apple pie danish cupcake sweet roll jujubes
-                                            tiramisu.Gummies
-                                            bonbon apple pie fruitcake icing biscuit apple pie jelly-o sweet roll.
+                                            pwridx(군사력) : 0.42 ; 낮은 상관관계가 있다.<br>
+                                            literacy(문해율) : 0.58 ; 다소 높은 상관관계가 있다.<br>
+                                            cumulative_cases(누적확진사례): 0.079 ; 상관관계가 없다.<br>
+                                            cumulative_deaths(누적 사망자수): 0.048 ; 상관관계가 없다.<br><br>
+                                            * 21년도 행복지수 상위 10개국을 토대로
+
                                         </p>
                                     </div>
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cras justo odio</li>
-                                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                                    <li class="list-group-item">Vestibulum at eros</li>
-                                </ul>
+
                             </div>
 
                         </div>
-                        <div class="col-xl-4 col-md-6 col-sm-12">
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Carousel</h4>
-                                        <h6 class="card-subtitle">Support card subtitle</h6>
-                                    </div>
-                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="{% static 'assets/images/samples/architecture1.jpg' %}" class="d-block w-100"
-                                                     alt="Image Architecture">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'assets/images/samples/bg-mountain.jpg' %}" class="d-block w-100"
-                                                     alt="Image Mountain">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'assets/images/samples/jump.jpg' %}" class="d-block w-100"
-                                                     alt="Image Jump">
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                            data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                            data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda
-                                            mollitia
-                                            officia dolorum eius quasi.Chocolate sesame snaps apple pie danish cupcake
-                                            sweet roll
-                                            jujubes tiramisu.
-                                        </p>
-                                        <p class="card-text">
-                                            Gummies bonbon apple pie fruitcake icing biscuit apple pie jelly-o sweet
-                                            roll. Toffee
-                                            sugar
-                                            plum sugar
-                                            plum jelly-o jujubes bonbon dessert carrot cake.
-                                            Sweet pie candy jelly. Sesame snaps biscuit sugar plum. Sweet roll topping
-                                            fruitcake.
-                                            Caramels liquorice
-                                            biscuit ice cream fruitcake cotton candy tart.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
                         <div class="col-md-6 col-sm-12">
                             <div class="card">
                                 <div class="card-content">
-                                    <img class="card-img-top img-fluid" src="{% static 'assets/images/samples/origami.jpg' %}"
+                                    <img class="card-img-top img-fluid" src="{% static 'assets/images/samples/mp3.png' %}"
                                         alt="Card image cap" style="height: 20rem" />
                                     <div class="card-body">
-                                        <h4 class="card-title">Top Image Cap</h4>
+                                        <h4 class="card-title">Military power</h4>
                                         <p class="card-text">
-                                            Jelly-o sesame snaps cheesecake topping. Cupcake fruitcake macaroon donut
-                                            pastry gummies tiramisu chocolate bar muffin. Dessert bonbon caramels
-                                            brownie chocolate
-                                            bar
-                                            chocolate tart dragée.
+                                            국력 데이터는 GlobalFirepower(GFP) 단체의 홈페이지에서 크롤링하였으며, 이 단체는 2006년부터 140개의 현대 군사력에 관한 데이터의 고유한 분석 표시를 제공해왔다. 이 GFP 순위는 재래식 수단으로 싸운 각 국가의 지상, 해상 및 공중에서의 잠재적인 전쟁 능력을 기반으로 한다.
+
+크롤링한 데이터는 국가별로 가용한 총 활성화된 병력의 순위를 가장 높은 것부터 가장 낮은 것까지 나열한다. <br> 이렇게 GFP는 군사력 및 재정에서부터 병참 능력 및 지리와 같은 50개 이상의 개별 요소로 국가의 PowerIndex('PwrIndx') 점수를 결정한다.
+
+완벽한 PwrIndx 점수는 0.0000이며 현재 GFP 공식의 범위에서 현실적으로 달성할 수 없다. PwrIndx 값이 작을수록 국가의 이론적 전투 능력은 더 강력하다.(핵 능력이 고려되지 않은 기존 수단 기준)
                                         </p>
-                                        <p class="card-text">
-                                            Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar
-                                            muffin.
-                                        </p>
-                                        <button class="btn btn-primary block">Update now</button>
+<span> </span>
+                                    <button class="btn btn-light-primary" style="float: right;"><a href="https://www.globalfirepower.com/countries-listing.php" target='_blank'>Read More</a></button><br>
                                     </div>
+                                    <span>    </span>
                                 </div>
                             </div>
                         </div>
@@ -297,21 +284,15 @@
                             <div class="card">
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <h4 class="card-title">Bottom Image Cap</h4>
+                                        <h4 class="card-title">Illiteracy rate</h4>
                                         <p class="card-text">
-                                            Jelly-o sesame snaps cheesecake topping. Cupcake fruitcake macaroon donut
-                                            pastry gummies tiramisu chocolate bar muffin. Dessert bonbon caramels
-                                            brownie chocolate
-                                            bar
-                                            chocolate tart dragée.
+                                            문해율은 읽고 쓸 수 있는 특정 연령대의 인구비율로 정의된다. 일반적으로 일상생활에 관한 짧고 간단한 문장을 이해하는 능력에 따라 측정된다.
+문해율 데이터는 UNESCO 단체에서 조사하는 국제 사회의 교육을 통한 모든 사람을 위한 교육(EFA) 중 원본데이터에서 가져왔으며,
+데이터는 literacy rate는 100을 만점으로 소수의 결측치는 제외된다.
                                         </p>
-                                        <p class="card-text">
-                                            Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar
-                                            muffin.
-                                        </p>
-                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                        <button class="btn btn-light-primary" style="float: right;"><a href="https://www.worldatlas.com/articles/the-highest-literacy-rates-in-the-world.html" target='_blank'>Read More</a></button><br>
                                     </div>
-                                    <img class="card-img-bottom img-fluid" src="{% static 'assets/images/samples/water.jpg' %}"
+                                    <img class="card-img-bottom img-fluid" src="{% static 'assets/images/samples/il.png' %}"
                                         alt="Card image cap" style="height: 20rem; object-fit: cover;">
                                 </div>
                             </div>

@@ -3,13 +3,9 @@ import pandas as pd
 
 from config.settings import DATA_DIRS
 
-df = pd.read_csv(DATA_DIRS[0]+'\\data02.csv')
-fig = px.choropleth(df, locations='country', locationmode='country names',
-                    color='score',
-                    animation_frame = 'year',
-                    basemap_visible=False,
-                    color_continuous_scale='Purpor_r',
-                    title=('Happiness score 2015-2021 Report')
-                   )
-fig.update_layout(height=600)
+df_il2 = pd.read_csv(DATA_DIRS[0]+'/literacy_all.csv')
+df_mp2 = pd.read_csv(DATA_DIRS[0]+'/happiness_pwrindx.csv')
+print(df_mp2)
+print(df_il2)
+fig = px.scatter(df_mp2, x="mililtarypower", y="score", color="region", hover_data=['country'])
 fig.show()

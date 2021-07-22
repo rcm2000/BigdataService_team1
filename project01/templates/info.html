@@ -23,20 +23,24 @@
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
-                <div class="sidebar-header">
+
                     <div class="d-flex justify-content-between">
+
                         <div class="logo">
-                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset=""></a>
+
+                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
+
                         </div>
+
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
-                </div>
+
                 <div class="sidebar-menu">
                     <ul class="menu">
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item ">
                             <a href="index" class='sidebar-link'>
                                 <i class="bi bi-award-fill"></i>
                                 <span>Main</span>
@@ -55,17 +59,17 @@
                         </li>
 
 
-                        <li class="sidebar-item  has-sub">
+                        <li class="sidebar-item  has-sub active ">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Title1</span>
+                                <span>Theme1</span>
                             </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
+                            <ul class="submenu active ">
+                                <li class="submenu-item active ">
                                     <a href="info">Info</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="social">Social</a>
+                                    <a href="social">Social support</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="health">Health</a>
@@ -76,14 +80,11 @@
                                 <li class="submenu-item ">
                                     <a href="etc">Etc</a>
                                 </li>
-                                <li class="submenu-item ">
-                                    <a href="summary">Summary</a>
-                                </li>
                                 </ul>
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Title2</span>
+                                <span>Theme2</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
@@ -97,9 +98,6 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="illiteracyrate">Illiteracy rate</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="summary2">Summary</a>
                                 </li>
                                 </ul>
 
@@ -155,13 +153,13 @@
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
                             <h3>프로젝트 소개</h3>
-                            <p class="text-subtitle text-muted">-행복리포트란</p>
+                            <p class="text-subtitle text-muted">- 행복리포트란</p>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Card</li>
+                                    <li class="breadcrumb-item"><a href="index">Main</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">info</li>
                                 </ol>
                             </nav>
                         </div>
@@ -185,6 +183,12 @@
                                     </div>
                                 </div>
 
+
+                            </div>
+                            <div class="card">
+
+
+
                             </div>
 
                         </div>
@@ -205,7 +209,7 @@
                                 </div>
                                 <div class="card-footer d-flex justify-content-between">
                                     <span></span>
-                                    <button class="btn btn-light-primary"><a href="https://worldhappiness.report/">Read More</a></button>
+                                    <button class="btn btn-light-primary"><a href="https://worldhappiness.report/" target='_blank'>Read More</a></button>
                                 </div>
                             </div>
 

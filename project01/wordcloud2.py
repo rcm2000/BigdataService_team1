@@ -83,4 +83,4 @@ if __name__ == '__main__':
     get_titles(1, 200)
 
     # 단어 30개까지 wordcloud로 출력
-    make_wordcloud(100)
+    make_wordcloud(50)

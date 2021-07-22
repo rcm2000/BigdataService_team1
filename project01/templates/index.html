@@ -23,16 +23,20 @@
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
-                <div class="sidebar-header">
+
                     <div class="d-flex justify-content-between">
+
                         <div class="logo">
-                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset=""></a>
+
+                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
+
                         </div>
+
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
-                </div>
+
                 <div class="sidebar-menu">
                     <ul class="menu">
 
@@ -58,14 +62,14 @@
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Title1</span>
+                                <span>Theme1</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
                                     <a href="info">Info</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="social">Social</a>
+                                    <a href="social">Social support</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="health">Health</a>
@@ -76,14 +80,11 @@
                                 <li class="submenu-item ">
                                     <a href="etc">Etc</a>
                                 </li>
-                                <li class="submenu-item ">
-                                    <a href="summary">Summary</a>
-                                </li>
                                 </ul>
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Title2</span>
+                                <span>Theme2</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
@@ -97,9 +98,6 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="illiteracyrate">Illiteracy rate</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="summary2">Summary</a>
                                 </li>
                                 </ul>
 
@@ -151,7 +149,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Profile Statistics</h3>
+
             </div>
             <div class="page-content">
                 <section class="row">
@@ -230,7 +228,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Profile Visit</h4>
+                                        <h4>2021 행복 지수</h4>
                                     </div>
                                     <div class="card-body">
                                         <div id="chart-profile-visit"></div>
@@ -242,7 +240,7 @@
                             <div class="col-12 col-xl-4">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Profile Visit</h4>
+                                        <h4>한·중·일 행복 지수</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
@@ -253,11 +251,11 @@
                                                         <use
                                                             xlink:href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill' %}" />
                                                     </svg>
-                                                    <h5 class="mb-0 ms-3">Europe</h5>
+                                                    <h5 class="mb-0 ms-3">Korea</h5>
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <h5 class="mb-0">862</h5>
+                                                <h5 class="mb-0">5.845</h5>
                                             </div>
                                             <div class="col-12">
                                                 <div id="chart-europe"></div>
@@ -271,11 +269,11 @@
                                                         <use
                                                             xlink:href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill' %}" />
                                                     </svg>
-                                                    <h5 class="mb-0 ms-3">America</h5>
+                                                    <h5 class="mb-0 ms-3">China</h5>
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <h5 class="mb-0">375</h5>
+                                                <h5 class="mb-0">5.339</h5>
                                             </div>
                                             <div class="col-12">
                                                 <div id="chart-america"></div>
@@ -289,11 +287,11 @@
                                                         <use
                                                             xlink:href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill' %}" />
                                                     </svg>
-                                                    <h5 class="mb-0 ms-3">Indonesia</h5>
+                                                    <h5 class="mb-0 ms-3">Japan</h5>
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <h5 class="mb-0">1025</h5>
+                                                <h5 class="mb-0">5.94</h5>
                                             </div>
                                             <div class="col-12">
                                                 <div id="chart-indonesia"></div>
@@ -305,7 +303,7 @@
                             <div class="col-12 col-xl-8">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Happiness score 2015-2021 Report</h4>
+                                        <h4> 2015-2021 세계 행복 지수 지도</h4>
                                     </div>
                                     <div class="card-body">
                                         {% autoescape off %}
@@ -332,7 +330,7 @@
                         </div>
                         <div class="card">
                             <div class="card-header">
-                                <h4>Team members</h4>
+                                <h4>팀 구성원</h4>
                             </div>
                             <div class="card-content pb-4">
                                 <div class="recent-message d-flex px-4 py-3">
@@ -341,7 +339,7 @@
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">이세령</h5>
-                                        <a class="text-muted mb-0" href="https://github.com/seryeongi">@seryeongi</a>
+                                        <a class="text-muted mb-0" href="https://github.com/seryeongi" target='_blank'>@seryeongi</a>
                                     </div>
                                 </div>
                                 <div class="recent-message d-flex px-4 py-3">
@@ -350,7 +348,7 @@
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">주현정</h5>
-                                        <a class="text-muted mb-0" href="https://github.com/HyunJung-Eliana">@HyunJung-Eliana</a>
+                                        <a class="text-muted mb-0" href="https://github.com/HyunJung-Eliana" target='_blank'>@HyunJung-Eliana</a>
                                     </div>
                                 </div>
                                 <div class="recent-message d-flex px-4 py-3">
@@ -359,7 +357,7 @@
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">노청명</h5>
-                                        <a class="text-muted mb-0" href="https://github.com/rcm2000">@rcm2000</a>
+                                        <a class="text-muted mb-0" href="https://github.com/rcm2000" target='_blank'>@rcm2000</a>
                                     </div>
 
                                 </div>
@@ -369,7 +367,7 @@
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">오건녕</h5>
-                                        <a class="text-muted mb-0" href="https://github.com/Geon-nyeong">@Geon-nyeong</a>
+                                        <a class="text-muted mb-0" href="https://github.com/Geon-nyeong" target='_blank'>@Geon-nyeong</a>
                                     </div>
 
                                 </div>
