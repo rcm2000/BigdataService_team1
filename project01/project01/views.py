@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from .models import User
 from matplotlib import pyplot as plt
 from plotly.offline import plot
 from plotly.graph_objs import Scatter
@@ -8,6 +11,8 @@ import pandas as pd
 import numpy as np
 from sklearn import datasets
 import seaborn as sns
+from .forms import LoginForm
+
 
 from config.settings import DATA_DIRS
 
@@ -29,14 +34,44 @@ def home(request):
 
 	return render(request, 'index.html')
 def index(request):
+	context = {}
+	if request.method == 'GET':
+		fig = plot(px.choropleth(df, locations='country', locationmode='country names',
+								 color='score',
+								 animation_frame='year',
+								 basemap_visible=True,
+								 color_continuous_scale='Tropic'
+								 ), output_type='div')
+		context['plot_div'] = fig
+		return render(request,'index.html',context)
+		context['login_session'] = False
+
+	elif request.method == 'POST':
+		context['login_session'] = False
+		id = request.POST.get('user_id')
+		pw = request.POST.get('user_pw')
+		infos = User.objects.all()
+		msg = 'id 혹은 password가 존재하지 않습니다.'
+		for info in infos:
+			if info.user_id == id and info.user_pw==pw:
+				name=info.user_name
+				msg = name + '님, 환영합니다.'
+				context['login_session'] = True
+
+
+
+
+		context['msg'] = msg
+	else:
+		context['login_session'] = False
 	fig = plot(px.choropleth(df, locations='country', locationmode='country names',
 						color='score',
 						animation_frame='year',
 						basemap_visible=True,
 						color_continuous_scale='Tropic'
 						),output_type='div')
-
-	return render(request, 'index.html', context={'plot_div': fig})
+	context['plot_div'] = fig
+	return render(request, 'index.html', context)
 def dashboard(request):
 
 	return render(request, 'dashboard.html')
@@ -46,6 +81,9 @@ def information(request):
 def info(request):
 
 	return render(request, 'info.html')
+def logout(request):
+	request.session.flush()
+	return render(request, 'index.html')
 def test(request):
 	fig4 = plot(px.histogram(df, x='social_support_std', nbins=20, animation_frame='year',
 							 title='Social support histogram'), output_type='div')
@@ -66,15 +104,58 @@ def table(request):
 def datatable(request):
 
 	return render(request, 'datatable.html')
+def regi_done(request):
+
+	return render(request, 'regi_done.html')
 def chart(request):
 
 	return render(request, 'chart.html')
 def authlogin(request):
+	loginform = LoginForm()
+	context = {'forms' : loginform}
 
-	return render(request, 'authlogin.html')
+	if request.method == 'GET':
+		return render(request,'authlogin.html',context)
+
+	elif request.method == 'POST':
+		loginform = LoginForm(request.POST)
+
+		if loginform.is_valid():
+			return redirect('/index')
+		else:
+			context['forms'] = loginform
+			if loginform.errors:
+				for value in loginform.errors.values():
+					context['error'] = value
+		return render(request,'authlogin.html',context)
+
 def authregister(request):
+	if request.method == 'GET':
+		return render(request, 'authregister.html')
 
-	return render(request, 'authregister.html')
+	elif request.method == 'POST':
+		user_id = request.POST.get('id',' ')
+		user_pw = request.POST.get('pw', ' ')
+		user_pw_confirm = request.POST.get('pw_confirm', ' ')
+		user_name = request.POST.get('name', ' ')
+		user_email = request.POST.get('email', ' ')
+
+		if(user_id or user_pw or user_pw_confirm or user_name or user_email) == ' ':
+			messages.info(request, '입력되지 않은 부분이 존재합니다.')
+			return render(request, 'authregister.html')
+		elif user_pw != user_pw_confirm:
+			return render(request, 'authregister.html')
+			messages.info(request, '입력하신 Password가 동일하지 않습니다.')
+		else:
+			user = User(
+				user_id = user_id,
+				user_pw = user_pw,
+				user_name=user_name,
+				user_email=user_email,
+			)
+			user.save()
+		return redirect('/regi_done')
+
 def authforgotpassword(request):
 
 	return render(request, 'authforgotpassword.html')
@@ -251,6 +332,18 @@ def illiteracyrate(request):
 def summary2(request):
 
 	return render(request, 'summary2.html')
+
+# def open(request):
+#     data = OpenAPI().decide();
+#     return HttpResponse(json.dumps(data), content_type='application/json');
+#
+# def open2(request):
+#     data = OpenAPI().clear();
+#     return HttpResponse(json.dumps(data), content_type='application/json');
+#
+# def open3(request):
+#     data = OpenAPI().death();
+#     return HttpResponse(json.dumps(data), content_type='application/json');
 
 # ['aggrnyl', 'agsunset', 'algae', 'amp', 'armyrose', 'balance',
 #              'blackbody', 'bluered', 'blues', 'blugrn', 'bluyl', 'brbg',

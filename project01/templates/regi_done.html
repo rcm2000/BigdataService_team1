@@ -22,29 +22,13 @@
 
                         <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
 
-                    <h1 class="auth-title">Log in.</h1>
-                    <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
+                    <h1 class="auth-title">Congratulations!</h1>
+                    <p class="auth-subtitle mb-5">회원가입이 완료되었습니다. <br>
+                        메인 페이지를 통하여 로그인이 가능합니다.</p>
 
-                    <form action="" method="POST" >
-                        {% csrf_token %}
-<!--                        {% for form in forms %}-->
-                        <div>
-                            {{ form }}
-                        </div>
-
-<!--                        {% endfor %}-->
-
-<!--                        {% if error %}-->
-<!--                        {{ error }}-->
-<!--                        {% endif %}-->
-
-                        <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5" type="submit" name="login-submit" value="login">Log in</button>
-                    </form>
                     <div class="text-center mt-5 text-lg fs-4">
-                        <p class="text-gray-600">Don't have an account? <a href="authregister"
-                                class="font-bold">Sign
-                                up</a>.</p>
-                        <p><a class="font-bold" href="authforgotpassword">Forgot password?</a>.</p>
+                        <a href="index"
+                                class="font-bold">Login page</a>.</p>
                     </div>
                 </div>
             </div>

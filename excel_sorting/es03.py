@@ -7,7 +7,7 @@ print(df['region'].unique())
 
 df2 = df.replace(['Western Europe','Central and Eastern Europe','Commonwealth of Independent States'],'Europe')
 df2 = df2.replace(['Eastern Asia','Southeastern Asia','Southern Asia','Southeast Asia','East Asia','South Asia'],'Asia')
-df2 = df2.replace(['Australia and New Zealand'],'Australia')
+df2 = df2.replace(['Australia and New Zealand'],'Oceania')
 df2 = df2.replace([ 'Sub-Saharan Africa', 'Middle East and North Africa', 'Middle East and Northern Africa'],'Africa')
 df2 = df2.replace(['North America and ANZ'],'North America')
 df2 = df2.replace(['Latin America and Caribbean'],'South America')

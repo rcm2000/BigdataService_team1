@@ -42,4 +42,10 @@ urlpatterns = [
     path('militarypower', views.militarypower, name='militarypower'),
     path('illiteracyrate', views.illiteracyrate, name='illiteracyrate'),
     path('summary2', views.summary2, name='summary2'),
+    path('regi_done', views.regi_done, name='regi_done'),
+    path('logout/', views.logout, name='logout'),
+    # path('open', views.open, name='open'),
+    # path('open2', views.open2, name='open2'),
+    # path('open3', views.open3, name='open3'),
+
 ]

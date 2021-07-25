@@ -309,7 +309,7 @@
                                     <div class="card-body">
                                         {% autoescape off %}
                                         {{ plot_div }}
-                                    {% endautoescape %}
+                                        {% endautoescape %}
                                     </div>
                                 </div>
                             </div>
@@ -319,12 +319,25 @@
                         <div class="card">
                             <div class="card-body py-4 px-5">
                                 <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-xl">
-                                        <img src="{% static 'assets/images/faces/1.jpg' %}" alt="Face 1">
-                                    </div>
+
                                     <div class="ms-3 name">
-                                        <h5 class="font-bold">John Duck</h5>
-                                        <h6 class="text-muted mb-0">@johnducky</h6>
+                                    <form method="POST">
+                                        <h6>로그인</h6>
+                                        {% csrf_token %}
+                                        {% if login_session %}
+                                        <div class="avatar avatar-lg">
+                                        <img src="{% static 'assets/images/faces/1.jpg' %}" alt="Face 1">
+                                        </div>
+                                        {{ msg }}
+                                        <div align="right"><a href="logout"><input type="submit" value="logout"></a></div>
+                                        {% else %}
+                                        <input class="form-control" name="user_id" placeholder="id" required />
+                                        <input class="form-control" name="user_pw" placeholder="password" type="password" required />
+                                        <button class="btn btn-primary btn-block " type="submit" value="login">로그인</button>
+                                        <br>{{ msg }}
+                                        {% endif %}
+
+                                    </form>
                                     </div>
                                 </div>
                             </div>
@@ -345,7 +358,7 @@
                                 </div>
                                 <div class="recent-message d-flex px-4 py-3">
                                     <div class="avatar avatar-lg">
-                                        <img src="{% static 'assets/images/faces/5.jpg' %}">
+                                        <img src="{% static 'assets/images/faces/HyunJung2.png' %}">
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">주현정</h5>
@@ -354,7 +367,7 @@
                                 </div>
                                 <div class="recent-message d-flex px-4 py-3">
                                     <div class="avatar avatar-lg">
-                                        <img src="{% static 'assets/images/faces/1.jpg' %}">
+                                        <img src="{% static 'assets/images/faces/cheongmyeong2.jpg' %}">
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">노청명</h5>
@@ -364,7 +377,7 @@
                                 </div>
                                 <div class="recent-message d-flex px-4 py-3">
                                     <div class="avatar avatar-lg">
-                                        <img src="{% static 'assets/images/faces/1.jpg' %}">
+                                        <img src="{% static 'assets/images/faces/Geonnyeong.png' %}">
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">오건녕</h5>
