@@ -2,106 +2,47 @@ import bs4
 import pandas as pd
 import requests
 import datetime
+import sys
 
-def decide():
-    now = datetime.datetime.now()
-    endDt = now.strftime('%Y%m%d')
-    now7 = now - datetime.timedelta(days=7)
-    startDt = now7.strftime('%Y%m%d')
+class OpenAPI:
+    def high(self):
+        now = datetime.datetime.now()
+        now1 = now.strftime('%Y%m%d')
 
-    url='http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=23S7ZYj%2BtnwtbEN09iKFg%2B4O9%2Fw2AtdiXKey2plFT%2BcbFUhh065aLcPqpnkgeoPfK58B11wEi25a4%2Fg1c7M98A%3D%3D&pageNo=1&numOfRows=10&startCreateDt='+startDt+'&endCreateDt='+endDt;
-    result = requests.get(url);
-    response = result.text.encode('utf-8');
-    xml_obj = bs4.BeautifulSoup(response, 'lxml-xml');
-    rows = xml_obj.find_all('item');
+        now2 = now - datetime.timedelta(days=1)
+        now2 = now2.strftime('%Y%m%d')
 
-    result = []         # 최종 리스트
-    nameList = []       # 컬럼 명
+        for n in [now1, now2]:
+            url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=23S7ZYj%2BtnwtbEN09iKFg%2B4O9%2Fw2AtdiXKey2plFT%2BcbFUhh065aLcPqpnkgeoPfK58B11wEi25a4%2Fg1c7M98A%3D%3D&pageNo=1&numOfRows=10&startCreateDt=' + n + '&endCreateDt=' + n;
+            result = requests.get(url);
+            response = result.text.encode('utf-8');
+            xml_obj = bs4.BeautifulSoup(response, 'lxml-xml');
+            rows = xml_obj.find_all('item');
 
-    rowsLen = len(rows);    # item의 개수
-    for i in range(rowsLen) :
-        item = rows[i].find_all();
+            if len(rows) != 0:
+                continue;
+
+        item = rows[0].find_all();
         itemData = []  # 아이템의 데이터
-        for j in range(len(item)) :
-            if i == 0 :
-                nameList.append(item[j].name);
+        for j in range(len(item)):
             text = item[j].text;
             itemData.append(text);
-        result.append(itemData);
 
-    data = pd.DataFrame(result, columns=nameList);
-        # Index(['accDefRate', 'accExamCnt', 'accExamCompCnt', 'careCnt', 'clearCnt',
-        #        'createDt', 'deathCnt', 'decideCnt', 'examCnt', 'resutlNegCnt', 'seq',
-        #        'stateDt', 'stateTime', 'updateDt'],
-        #       dtype='object')
-    data = data.astype({'decideCnt':int});
-    results = data['decideCnt'].to_list();
-    print(results);
-    return results
+        # nameIndx = ['accDefRate', 'accExamCnt', 'accExamCompCnt', 'careCnt', 'clearCnt',
+        #            'createDt', 'deathCnt', 'decideCnt', 'examCnt', 'resutlNegCnt', 'seq',
+        #            'stateDt', 'stateTime', 'updateDt'];
+        nameIndx = ['누적 확진률', '누적 검사 수', '누적 검사 완료 수', '치료중 환자 수', '격리해제 수',
+                    '등록일시분초', '사망자 수', '확진자 수', '검사진행 수', '결과 음성 수', '게시글번호',
+                    '기준일', '기준시간', '수정일시분초']
+        colIndx = ['', '#BE3075', '', '#EB001F', '#64A12D', '', '#FFED00', '#000000', '#008AC5', '#009EE0']
 
-def clear():
-    now = datetime.datetime.now()
-    endDt = now.strftime('%Y%m%d')
-    now7 = now - datetime.timedelta(days=7)
-    startDt = now7.strftime('%Y%m%d')
+        data = [];
+        for i in [7,4,8,3]:
+            data.append([nameIndx[i], round(int(itemData[i])/10000)])
 
-    url='http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=23S7ZYj%2BtnwtbEN09iKFg%2B4O9%2Fw2AtdiXKey2plFT%2BcbFUhh065aLcPqpnkgeoPfK58B11wEi25a4%2Fg1c7M98A%3D%3D&pageNo=1&numOfRows=10&startCreateDt='+startDt+'&endCreateDt='+endDt;
-    result = requests.get(url);
-    response = result.text.encode('utf-8');
-    xml_obj = bs4.BeautifulSoup(response, 'lxml-xml');
-    rows = xml_obj.find_all('item');
-
-    result = []         # 최종 리스트
-    nameList = []       # 컬럼 명
-
-    rowsLen = len(rows);    # item의 개수
-    for i in range(rowsLen) :
-        item = rows[i].find_all();
-        itemData = []  # 아이템의 데이터
-        for j in range(len(item)) :
-            if i == 0 :
-                nameList.append(item[j].name);
-            text = item[j].text;
-            itemData.append(text);
-        result.append(itemData);
-
-    data = pd.DataFrame(result, columns=nameList);
-    data = data.astype({'clearCnt':int});
-    results = data['clearCnt'].to_list();
-    print(results);
-    return results
-
-def death():
-    now = datetime.datetime.now()
-    endDt = now.strftime('%Y%m%d')
-    now7 = now - datetime.timedelta(days=7)
-    startDt = now7.strftime('%Y%m%d')
-
-    url='http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=23S7ZYj%2BtnwtbEN09iKFg%2B4O9%2Fw2AtdiXKey2plFT%2BcbFUhh065aLcPqpnkgeoPfK58B11wEi25a4%2Fg1c7M98A%3D%3D&pageNo=1&numOfRows=10&startCreateDt='+startDt+'&endCreateDt='+endDt;
-    result = requests.get(url);
-    response = result.text.encode('utf-8');
-    xml_obj = bs4.BeautifulSoup(response, 'lxml-xml');
-    rows = xml_obj.find_all('item');
-
-    result = []         # 최종 리스트
-    nameList = []       # 컬럼 명
-
-    rowsLen = len(rows);    # item의 개수
-    for i in range(rowsLen) :
-        item = rows[i].find_all();
-        itemData = []  # 아이템의 데이터
-        for j in range(len(item)) :
-            if i == 0 :
-                nameList.append(item[j].name);
-            text = item[j].text;
-            itemData.append(text);
-        result.append(itemData);
-
-    data = pd.DataFrame(result, columns=nameList);
-    data = data.astype({'deathCnt':int});
-    results = data['deathCnt'].to_list();
-    print(results);
-    return results
+        results = {'d1':data[0], 'd2':data[1], 'd3':data[2], 'd4':data[3]}
+        print(results)
+        return results
 
 if __name__ == '__main__' :
-    open();
+    OpenAPI().high()

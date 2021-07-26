@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+import project01
 from project01 import views
 
 urlpatterns = [
@@ -44,8 +45,5 @@ urlpatterns = [
     path('summary2', views.summary2, name='summary2'),
     path('regi_done', views.regi_done, name='regi_done'),
     path('logout/', views.logout, name='logout'),
-    # path('open', views.open, name='open'),
-    # path('open2', views.open2, name='open2'),
-    # path('open3', views.open3, name='open3'),
-
+    path('highchart', views.highchart, name='highchart'),
 ]

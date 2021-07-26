@@ -1,6 +1,11 @@
+import json
+import xml
+
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+
+from myanalysis.openapi import OpenAPI
 from .models import User
 from matplotlib import pyplot as plt
 from plotly.offline import plot
@@ -333,30 +338,6 @@ def summary2(request):
 
 	return render(request, 'summary2.html')
 
-# def open(request):
-#     data = OpenAPI().decide();
-#     return HttpResponse(json.dumps(data), content_type='application/json');
-#
-# def open2(request):
-#     data = OpenAPI().clear();
-#     return HttpResponse(json.dumps(data), content_type='application/json');
-#
-# def open3(request):
-#     data = OpenAPI().death();
-#     return HttpResponse(json.dumps(data), content_type='application/json');
-
-# ['aggrnyl', 'agsunset', 'algae', 'amp', 'armyrose', 'balance',
-#              'blackbody', 'bluered', 'blues', 'blugrn', 'bluyl', 'brbg',
-#              'brwnyl', 'bugn', 'bupu', 'burg', 'burgyl', 'cividis', 'curl',
-#              'darkmint', 'deep', 'delta', 'dense', 'earth', 'edge', 'electric',
-#              'emrld', 'fall', 'geyser', 'gnbu', 'gray', 'greens', 'greys',
-#              'haline', 'hot', 'hsv', 'ice', 'icefire', 'inferno', 'jet',
-#              'magenta', 'magma', 'matter', 'mint', 'mrybm', 'mygbm', 'oranges',
-#              'orrd', 'oryel', 'oxy', 'peach', 'phase', 'picnic', 'pinkyl',
-#              'piyg', 'plasma', 'plotly3', 'portland', 'prgn', 'pubu', 'pubugn',
-#              'puor', 'purd', 'purp', 'purples', 'purpor', 'rainbow', 'rdbu',
-#              'rdgy', 'rdpu', 'rdylbu', 'rdylgn', 'redor', 'reds', 'solar',
-#              'spectral', 'speed', 'sunset', 'sunsetdark', 'teal', 'tealgrn',
-#              'tealrose', 'tempo', 'temps', 'thermal', 'tropic', 'turbid',
-#              'turbo', 'twilight', 'viridis', 'ylgn', 'ylgnbu', 'ylorbr',
-#              'ylorrd'].
+def highchart(request):
+    data = OpenAPI().high();
+    return HttpResponse(json.dumps(data), content_type='application/json');
