@@ -30,7 +30,6 @@ urlpatterns = [
     path('table', views.table, name='table'),
     path('datatable', views.datatable, name='datatable'),
     path('chart', views.chart, name='chart'),
-    path('authlogin', views.authlogin, name='authlogin'),
     path('authregister', views.authregister, name='authregister'),
     path('authforgotpassword', views.authforgotpassword, name='authforgotpassword'),
     path('social', views.social, name='social'),
@@ -45,5 +44,5 @@ urlpatterns = [
     path('summary2', views.summary2, name='summary2'),
     path('regi_done', views.regi_done, name='regi_done'),
     path('logout/', views.logout, name='logout'),
-    path('highchart', views.highchart, name='highchart'),
+    # path('highchart', views.highchart, name='highchart'),
 ]

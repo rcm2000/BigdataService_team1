@@ -15,7 +15,7 @@ import pandas as pd
 import numpy as np
 from sklearn import datasets
 import seaborn as sns
-from .forms import LoginForm
+# from .forms import LoginForm
 
 
 from config.settings import DATA_DIRS
@@ -114,25 +114,6 @@ def regi_done(request):
 def chart(request):
 
 	return render(request, 'chart.html')
-def authlogin(request):
-	loginform = LoginForm()
-	context = {'forms' : loginform}
-
-	if request.method == 'GET':
-		return render(request,'authlogin.html',context)
-
-	elif request.method == 'POST':
-		loginform = LoginForm(request.POST)
-
-		if loginform.is_valid():
-			return redirect('/index')
-		else:
-			context['forms'] = loginform
-			if loginform.errors:
-				for value in loginform.errors.values():
-					context['error'] = value
-		return render(request,'authlogin.html',context)
-
 def authregister(request):
 	if request.method == 'GET':
 		return render(request, 'authregister.html')
