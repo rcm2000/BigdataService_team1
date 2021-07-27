@@ -541,7 +541,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
                 )  
      plt.show()
      ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap_title2.GIF">
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap.png">
      
 
 2. Covid-19
