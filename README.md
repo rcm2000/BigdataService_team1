@@ -483,6 +483,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
   fig.show()
   ```
   ![box_social](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/box_social.GIF)
+  
 * Correlation plot(Heatmap)
 
   score와 다른 모든 변수들 ; gdp, social support, health, freedom, trust, generosity
@@ -514,9 +515,29 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 * Map
 
+  ```py
+  fig2 = plot(px.choropleth(df, locations='country', locationmode='country names',
+  							 color='social_support_std',
+  							 animation_frame='year',
+  							 basemap_visible=True,
+  							 color_continuous_scale='Tropic',
+                      		title=('World social support map')
+  							 ), output_type='div')
+  ```
+
+  ![map1](md-images/map1.PNG)
+
 * Scatter plot
 
+  ```python
+  plot_div = plot(
+  		px.scatter(df_exp, x="socialsupport", y="score", animation_frame="year", animation_group="country", color="list",
+  				   hover_name="country", facet_col="region",size="area",
+  				   log_x=False, size_max=30, range_x=[-3, 3], range_y=[0, 10],
+                      		title=('Regional social support scatter plot')), output_type='div')
+  ```
 
+  ![scatter1](md-images/scatter1.PNG)
 
 **3. 7월 20~21일 : Theme2 데이터**
 
@@ -541,7 +562,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
                 )  
      plt.show()
      ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap.png">
+    <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap.png">
      
 
 2. Covid-19
@@ -552,7 +573,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig = px.area(covid_monthly_con6, x="month", y="monthly_cumulative_cases", color="country", title = 'Country6 monthly cumulative cases (2020.07~2021.06)')
      fig.show()
      ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_covid_monthly.GIF">
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_covid_monthly.GIF">
      * 월별 확진자수 추이(나라별, 6개국)
 
    * Area chart
@@ -561,7 +582,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig = px.area(covid_monthly_con6, x="month", y="monthly_cumulative_deaths", color="country",line_group="country")
      fig.show()
      ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_monthly_death.GIF">
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_monthly_death.GIF">
      * 월별 사망자수 추이(나라별, 6개국)
 
    * Barchart
@@ -578,11 +599,6 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
    * Scatter plot
 
-     ```python
-     ```
-
-     
-
      ```bash
      fig = px.scatter(re_covid, x="rate_cases", y="score", color="country",title = "Case Rate Top 30")
      fig.show()
@@ -591,12 +607,6 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      * 인구 대비 확진자 수
 
      <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726030814810.png" alt="image-20210726030814810" style="zoom:50%;" />
-
-     ```bash
-     
-     ```
-
-     * 확진자수 ~ 행복지수(인구수/면적를 점 크기)
 
    * Pie chart 
 
@@ -621,9 +631,16 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
    * Map
 
      ```bash
+     fig1 = plot(px.choropleth(df_mp2, locations='country', locationmode='country names',
+     							  color='mililtarypower',
+     							  animation_frame='year',
+     							  basemap_visible=True,
+     							  color_continuous_scale='armyrose',
+     							  title=('World military power map')
+     							  ), output_type='div')
      ```
 
-     * 세계지도(2020, 2021)(청명)
+     ![map2](md-images/map2.PNG)
 
    * Heatmap
 
@@ -672,10 +689,16 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
    * Map
 
      ```bash
+     fig1 = plot(px.choropleth(df_il, locations='country', locationmode='country names',
+     							  color='rate',
+     							  basemap_visible=True,
+     							  color_continuous_scale='Tropic',
+     							  title=('World illiteracy map')
      
+     							  ), output_type='div')
      ```
 
-     * 세계지도(최신자료)
+     ![map3](md-images/map3.PNG)
 
    * Barchart
 
@@ -696,9 +719,11 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
    * Scatter plot
 
      ```bash
+     fig3 = plot(px.scatter(df_il2, x="literacyrate", y="score", color="region", hover_data=['country'],
+     						   animation_frame='year'), output_type='div')
      ```
 
-     * 전체 국가 행복지수 ~ literacy : 산점도(데이터셋 다시!, 문맹률 기준 나라!)
+     ![scatter2](md-images/scatter2.PNG)
 
 5. 메인 페이지 - 막대그래프
 
@@ -885,7 +910,7 @@ class User(models.Model):
 
 ![superuser](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/superuser.png)
 
-  																			admin 유저 생성
+​																		admin 유저 생성
 
 2. python manage.py makemigrations
 
