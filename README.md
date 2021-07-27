@@ -498,7 +498,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
             )
   ```
 
-  ![heatmaps](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmaps-1627328848522.png)
+  ![heatmaps](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmaps.png)
 
 * Histogram
 
