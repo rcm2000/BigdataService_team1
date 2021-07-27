@@ -785,7 +785,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 **2. bootstrap 선택 및 적용**
 
--  [themewagon][https://themewagon.com/] bootstrap 사이트를 통하여 프로젝트에 알맞는 bootstrap 선정
+-  https://themewagon.com/ bootstrap 사이트를 통하여 프로젝트에 알맞는 bootstrap 선정
 
   ![mazer](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/mazer.PNG)Mazer bootstrap으로 최종 선택
 
