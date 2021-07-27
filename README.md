@@ -396,7 +396,7 @@ def vaccine(self):
   plotly([https://plotly.com/](https://plotly.com/))
 
 
-<img src="../../Users/cjdau/Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/plotly.PNG" alt="plotly" style="zoom:50%;" />
+<img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/plotly.PNG" />
 
 - 2015~2021의 변화하는 데이터를 애니메이션바를 통하여 시각화하기 적합하다고 판단하여 선택.
 
