@@ -782,7 +782,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 **3. 사이드바 구성**
 
-![side bar](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/side%2520bar.png)
+![side bar](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/side bar.png)
 
 - 주제를 토대로 sidebar를 구성
 
