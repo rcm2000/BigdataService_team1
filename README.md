@@ -762,7 +762,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 -  [themewagon][https://themewagon.com/] bootstrap 사이트를 통하여 프로젝트에 알맞는 bootstrap 선정
 
-  ![mazer](C:/Users/cjdau/Desktop/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%88%98%EC%97%85/project_md/img/mazer.PNG)Mazer bootstrap으로 최종 선택
+  ![mazer](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/mazer.PNG)Mazer bootstrap으로 최종 선택
 
 - static 폴더 생성 및 bootstrap href 연결
 
@@ -782,7 +782,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 **3. 사이드바 구성**
 
-![side bar](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/side%2520bar.png)
+![side bar](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/side%2520bar.png)
 
 - 주제를 토대로 sidebar를 구성
 
@@ -811,11 +811,11 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 - 상단 테마별 이미지 구성
 
-  ![top](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/top.PNG)
+  ![top](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/top.PNG)
 
 - 데이터 전처리 및 분석 과정에서 만들어진 코드를 토대로 page build
 
-  ![mid](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/mid.PNG)
+  ![mid](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/mid.PNG)
 
   plotly 모듈로 구현된 코드를 바탕으로 views.py에서 페이지로 전달
 
@@ -837,7 +837,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 - 서브 페이지에서 중요하다 판단되는 그래프 및 내용을 바탕으로 메인페이지 구성
 
-  ![main](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/main.png)
+  ![main](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/main.png)
 
 - 기존 javascript 내용을 수정하여 행복 데이터 삽입
 
@@ -849,7 +849,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
 - MVT모델 패턴
 
-![mvt](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/mvt.jpg)
+![mvt](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/mvt.jpg)
 
 
 
@@ -883,23 +883,23 @@ class User(models.Model):
 
 1.python manage.py createsuperuser
 
-![superuser](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/superuser.png)
+![superuser](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/superuser.png)
 
   																			admin 유저 생성
 
 2. python manage.py makemigrations
 
-![migrate2](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/migrate2.png)
+![migrate2](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/migrate2.png)
 
 ​																				로그파일 생성
 
 3. python manage.py migrate
 
-   ![migrate](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/migrate.png)
+   ![migrate](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/migrate.png)
 
    ​																			서버에 등록
 
-![admin](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/admin.jpg)
+![admin](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/admin.jpg)
 
 ​																		admin 사이트 구축 완료
 
@@ -907,19 +907,19 @@ class User(models.Model):
 
 - 기존에 bootstrap에서 제공된 sign-up 페이지 url 연결
 
-​	<img src="../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/signup.PNG" alt="signup" style="zoom:50%;" />
+​	<img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/signup.PNG" alt="signup" style="zoom:50%;" />
 
 - views.py 구성
 
-  ![regi](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/regi.PNG)
+  ![regi](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/regi.PNG)
 
 DB에 등록된 값과 중복값이 없도록 설계, 빈 부분이 있을 시 에러메세지 출력
 
 - 회원가입 구현 및 확인
 
-  <img src="../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/signup2.PNG" alt="signup2" style="zoom: 50%;" />
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/signup2.PNG" alt="signup2" style="zoom: 50%;" />
 
-![ad_done](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/ad_done.PNG)
+![ad_done](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/ad_done.PNG)
 
 -- 가입 후 admin 페이지에 등록된 모습
 
@@ -927,11 +927,11 @@ DB에 등록된 값과 중복값이 없도록 설계, 빈 부분이 있을 시 �
 
 - index 페이지에 로그인 form 구축
 
-  ![login](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/login.PNG)
+  ![login](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/login.PNG)
 
 - views.py 설정
 
-  ![index](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/index.PNG)
+  ![index](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/index.PNG)
 
 1. get으로 받은값과 DB의 값들을 조회하여 일치할 시 로그인 되도록 구현
 
@@ -960,7 +960,7 @@ DB에 등록된 값과 중복값이 없도록 설계, 빈 부분이 있을 시 �
 
       
 
-![login4](../../Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/login4.PNG)
+![login4](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/login4.PNG)
 
 ​																			index에서 출력
 
