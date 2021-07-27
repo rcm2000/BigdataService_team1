@@ -319,5 +319,4 @@ def summary2(request):
 	return render(request, 'summary2.html')
 
 # def highchart(request):
-#     data = OpenAPI().high();
 #     return HttpResponse(json.dumps(data), content_type='application/json');
