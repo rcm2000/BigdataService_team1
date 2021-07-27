@@ -444,7 +444,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
   fig.show()
   ```
 
-  <img src="md-images/image-20210726022742204.png" alt="image-20210726022742204" style="zoom: 50%;" />
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726022742204.png" alt="image-20210726022742204" style="zoom: 50%;" />
 
 * Horizontal Barplot
 
@@ -470,7 +470,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
   fig.show()
   ```
 
-  <img src="md-images/image-20210726023933273.png" alt="image-20210726023933273" style="zoom:50%;" />
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726023933273.png" alt="image-20210726023933273" style="zoom:50%;" />
 
 * Boxplot
 
@@ -498,7 +498,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
             )
   ```
 
-  ![heatmaps](md-images/heatmaps-1627328848522.png)
+  ![heatmaps](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmaps-1627328848522.png)
 
 * Histogram
 
@@ -510,7 +510,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
   fig.show()
   ```
 
-  ![histo](md-images/histo.png)
+  ![histo](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/histo.png)
 
 * Map
 
@@ -574,7 +574,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
      * 인구 대비 확진자 수 (2020~2021년, 누적 확진자수)
 
-     <img src="md-images/image-20210726030723725.png" alt="image-20210726030723725" style="zoom:50%;" />
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726030723725.png" alt="image-20210726030723725" style="zoom:50%;" />
 
    * Scatter plot
 
@@ -590,7 +590,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
      * 인구 대비 확진자 수
 
-     <img src="md-images/image-20210726030814810.png" alt="image-20210726030814810" style="zoom:50%;" />
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726030814810.png" alt="image-20210726030814810" style="zoom:50%;" />
 
      ```bash
      
@@ -634,7 +634,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      plt.show()
      ```
 
-     <img src="md-images/image-20210726025456988.png" alt="image-20210726025456988" style="zoom:50%;" />
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726025456988.png" alt="image-20210726025456988" style="zoom:50%;" />
 
    * Horizontal Barchart
 
@@ -645,7 +645,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
      * x : power index, y : 연도별 상위 10개국(2021년)
 
-     <img src="md-images/image-20210726025106450.png" alt="image-20210726025106450" style="zoom:50%;" />
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726025106450.png" alt="image-20210726025106450" style="zoom:50%;" />
 
    * Scatter plot
 
@@ -656,7 +656,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig.show()
      ```
 
-     <img src="md-images/image-20210726025841820.png" alt="image-20210726025841820" style="zoom:50%;" />
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726025841820.png" alt="image-20210726025841820" style="zoom:50%;" />
 
      * 행복지수가 평균보다 높은 나라와 낮은 나라 - x : power index, y : score
 
@@ -665,7 +665,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig.show()
      ```
 
-     <img src="md-images/image-20210726030119823.png" alt="image-20210726030119823" style="zoom:50%;" />
+     <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726030119823.png" alt="image-20210726030119823" style="zoom:50%;" />
 
 4. 문해율
 
@@ -732,7 +732,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
    plt.axis('off')
    ```
 
-   <img src="md-images/image-20210726031146054.png" alt="image-20210726031146054" style="zoom:50%;" />
+   <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210726031146054.png" alt="image-20210726031146054" style="zoom:50%;" />
 
 **5. 7월 23일 : Theme2 - info **
 
@@ -740,7 +740,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
 
    * [Highchart 그래프 이용](https://www.highcharts.com/demo/parliament-chart)
 
-   ![image-20210727114817650](md-images/image-20210727114817650.png)
+   ![image-20210727114817650](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/image-20210727114817650.png)
 
 ### 4.웹페이지 구축
 
