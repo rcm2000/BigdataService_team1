@@ -482,7 +482,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
   fig.update_xaxes(showticklabels=True , matches=None)
   fig.show()
   ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/tree/master/md-images/box_social.gif">
+  ![box_social](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/box_social.gif)
 * Correlation plot(Heatmap)
 
   score와 다른 모든 변수들 ; gdp, social support, health, freedom, trust, generosity
