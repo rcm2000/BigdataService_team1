@@ -562,7 +562,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
                 )  
      plt.show()
      ```
-    <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap.png">
+      <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap.png">
      
 
 2. Covid-19
@@ -981,9 +981,9 @@ DB에 등록된 값과 중복값이 없도록 설계, 빈 부분이 있을 시 �
    </form>
    ```
 
-   3. template에 로그인 세션이 True일 경우 로그인 완료메세지, False일 경우 로그인 실패 메세지 출력
+3. template에 로그인 세션이 True일 경우 로그인 완료메세지, False일 경우 로그인 실패 메세지 출력
 
-      
+   
 
 ![login4](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/login4.PNG)
 
