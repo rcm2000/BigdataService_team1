@@ -482,7 +482,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
   fig.update_xaxes(showticklabels=True , matches=None)
   fig.show()
   ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/box_social.gif">
+  <img src="https://github.com/rcm2000/BigdataService_team1/tree/master/md-images/box_social.gif">
 * Correlation plot(Heatmap)
 
   score와 다른 모든 변수들 ; gdp, social support, health, freedom, trust, generosity
@@ -541,7 +541,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
                 )  
      plt.show()
      ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap_title2.gif">
+  <img src="https://github.com/rcm2000/BigdataService_team1/tree/master/md-images/heatmap_title2.gif">
      
 
 2. Covid-19
@@ -552,7 +552,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig = px.area(covid_monthly_con6, x="month", y="monthly_cumulative_cases", color="country", title = 'Country6 monthly cumulative cases (2020.07~2021.06)')
      fig.show()
      ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_covid_monthly.gif">
+  <img src="https://github.com/rcm2000/BigdataService_team1/tree/master/md-images/area_covid_monthly.gif">
      * 월별 확진자수 추이(나라별, 6개국)
 
    * Area chart
@@ -561,7 +561,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig = px.area(covid_monthly_con6, x="month", y="monthly_cumulative_deaths", color="country",line_group="country")
      fig.show()
      ```
-  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_monthly_death.gif">
+  <img src="https://github.com/rcm2000/BigdataService_team1/tree/master/md-images/area_monthly_death.gif">
      * 월별 사망자수 추이(나라별, 6개국)
 
    * Barchart
