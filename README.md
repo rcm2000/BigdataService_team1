@@ -34,7 +34,7 @@
 
   파이참 환경이 구비되어 있다면, 위 GitHub코드를 수동으로 다운받거나 cmd창에서 git clone하여 local에서 바로 사용할 수 있습니다 .또한 pythonanywhere을 통하여 웹상에 배포가 되어 있으니 하단의 링크로 직접 확인하실 수 있습니다. 
 
- [http://cjdauddl93.pythonanywhere.com/][http://cjdauddl93.pythonanywhere.com/]
+ [pythonanywhere](http://cjdauddl93.pythonanywhere.com/)
 
 ## 3. 절차
 
@@ -482,7 +482,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
   fig.update_xaxes(showticklabels=True , matches=None)
   fig.show()
   ```
-<img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/box_social.gif" style="zoom:50%;" />
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/box_social.gif">
 * Correlation plot(Heatmap)
 
   score와 다른 모든 변수들 ; gdp, social support, health, freedom, trust, generosity
@@ -541,7 +541,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
                 )  
      plt.show()
      ```
-<img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap_title2.gif" style="zoom:50%;" />
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/heatmap_title2.gif">
      
 
 2. Covid-19
@@ -552,7 +552,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig = px.area(covid_monthly_con6, x="month", y="monthly_cumulative_cases", color="country", title = 'Country6 monthly cumulative cases (2020.07~2021.06)')
      fig.show()
      ```
-<img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_covid_monthly.gif" style="zoom:50%;" />
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_covid_monthly.gif">
      * 월별 확진자수 추이(나라별, 6개국)
 
    * Area chart
@@ -561,7 +561,7 @@ fig = px.choropleth(df, locations='country', locationmode='country names',
      fig = px.area(covid_monthly_con6, x="month", y="monthly_cumulative_deaths", color="country",line_group="country")
      fig.show()
      ```
-<img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_monthly_death.gif" style="zoom:50%;" />
+  <img src="https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/area_monthly_death.gif">
      * 월별 사망자수 추이(나라별, 6개국)
 
    * Barchart
