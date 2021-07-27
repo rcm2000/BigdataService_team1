@@ -400,7 +400,7 @@ def vaccine(self):
 
 - 2015~2021의 변화하는 데이터를 애니메이션바를 통하여 시각화하기 적합하다고 판단하여 선택.
 
-![plotly_ani2](../../Users/cjdau/Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/plotly_ani2.PNG)
+![plotly_ani2](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/plotly_ani2.PNG)
 
 ``` python
 px.scatter(df_exp, x="socialsupport", y="score", animation_frame="year", animation_group="country", color="list",
@@ -414,7 +414,7 @@ px.scatter(df_exp, x="socialsupport", y="score", animation_frame="year", animati
   - 하단의 애니메이션 바를 통하여 년도별 흐름을 시각화.
   - 대륙별 크기를 column에 추가하여 요소의 크기로 반영.
 
-![plotly_map2](../../Users/cjdau/Desktop/%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%2520%25EC%2588%2598%25EC%2597%2585/project_md/md-images/plotly_map2.png)
+![plotly_map2](https://github.com/rcm2000/BigdataService_team1/blob/master/md-images/plotly_map2.png)
 
 ```python
 fig = px.choropleth(df, locations='country', locationmode='country names',
