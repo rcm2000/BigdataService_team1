@@ -24,17 +24,27 @@
 
 - Theme2 ; 외부데이터와 행복지수 분석 ; Covid-19, PowerIndex, Literacy
 
-### 4. 프로젝트 환경 및 사용된 기술
+### 4. 프로젝트 환경 및 사용된 툴
 
-- 파이참 개발환경에서 django을 이용하여 pythonanywhere에 웹사이트를 구축하였습니다
-- pandas, numpy, plotly 등의 라이브러리를 이용해 데이터 전처리 및 시각화했습니다. 
-- Git-Hub, Zoom, 구글드라이브 등을 이용해 협업을 진행했습니다.
+|        데이터 수집        |    전처리     |                 시각화                 |           데이터 분석           |      배포      |
+| :-----------------------: | :-----------: | :------------------------------------: | :-----------------------------: | :------------: |
+| Beautifulsoup, kakaotrans | Pandas, numpy | Matplotlib, Seaborn, Plotly, highchart | Sklearn, Xgboost, lgbm , konlpy | pythonanywhere |
+
+|             개발 도구              |          협업 도구           |
+| :--------------------------------: | :--------------------------: |
+| jupyter notebook & Colab & pycharm | Zoom & Google Drive & Github |
+
+
 
 ### 5. 가이드
 
   파이참 환경이 구비되어 있다면, 위 GitHub코드를 수동으로 다운받거나 cmd창에서 git clone하여 local에서 바로 사용할 수 있습니다 .또한 pythonanywhere을 통하여 웹상에 배포가 되어 있으니 하단의 링크로 직접 확인하실 수 있습니다. 
 
- [pythonanywhere](http://cjdauddl93.pythonanywhere.com/)
+![index2](md-images/index2.png)
+
+ [http://cjdauddl93.pythonanywhere.com/](http://cjdauddl93.pythonanywhere.com/)
+
+
 
 ## 3. 절차
 
@@ -44,13 +54,13 @@
 
 #### 1. 데이터 수집
 
-* WHO : [코로나](https://covid19.who.int/info/)
-
-* Kaggle : 행복리포트 데이터()
-
-* GFP : [군사력2020](https://ceoworld.biz/2020/03/03/ranked-military-strength-of-nations-2020-comparing-global-armed-forces/), [군사력2021](https://www.globalfirepower.com/countries-listing.php)
-
-* literacy : [문해율](https://worldpopulationreview.com/country-rankings/literacy-rate-by-country)
+|        리스트        |                             링크                             |
+| :------------------: | :----------------------------------------------------------: |
+| WorldHappinessReport |                https://worldhappiness.report/                |
+|         WHO          |                https://covid19.who.int/info/                 |
+|        Kaggle        | https://www.kaggle.com/mathurinache/world-happiness-report-20152021 |
+|         GFP          |               https://www.globalfirepower.com                |
+|       literacy       | https://worldpopulationreview.com/country-rankings/literacy-rate-by-country |
 
 #### 2. 데이터 전처리
 
