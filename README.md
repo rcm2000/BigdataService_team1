@@ -38,11 +38,10 @@
 
 ### 5. 가이드
 
-  파이참 환경이 구비되어 있다면, 위 GitHub코드를 수동으로 다운받거나 cmd창에서 git clone하여 local에서 바로 사용할 수 있습니다 .또한 pythonanywhere을 통하여 웹상에 배포가 되어 있으니 하단의 링크로 직접 확인하실 수 있습니다. 
+  파이참 환경이 구비되어 있다면, 위 GitHub코드를 수동으로 다운받거나 cmd창에서 git clone하여 local에서 바로 사용할 수 있습니다 .
 
 ![index2](md-images/index2.png)
 
- [http://cjdauddl93.pythonanywhere.com/](http://cjdauddl93.pythonanywhere.com/)
 
 
 
